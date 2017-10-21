@@ -1,0 +1,33 @@
+body {
+	background-color: black;
+}
+
+.animebtn {
+	color: white;
+	padding: 5px;
+	font-size: 15px;
+	border-radius: 12.5px;
+	background-color: red;
+	margin: 10px;
+}
+
+.button-search-row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.col-md-3 {
+	background-color: rgba(217, 217, 217, .5);
+	padding: 10px;
+}
+
+.col-md-7 {
+	background-color: rgba(217, 217, 217, .5);
+	padding: 10px;	
+	margin-right: 10px;
+}
+
+.results {
+	display: inline-block;
+	margin: 10px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+		<!--Linking Bootstrap and CSS sheets-->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<head>
+	<title>Anime Giphy Finder!</title>
+</head>
+<body>	
+	<div class ="display">
+		<div class="row button-search-row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10 button-search"></div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class = "col-md-1"></div>
+			<div class = "col-md-7 giphy-results"></div>
+			<div class = "col-md-3">
+				<form id="anime-form">
+			      	<label for="anime-input">Anime Name: </label>
+			      	<input type="text" id="anime-input"><br>
+			      	<input id="add-anime" type="submit" value="Add Anime!">
+    </form>
+			</div>
+			<div class = "col-md-1"></div>
+		</div>
+	</div>
+	 	<!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!--Linking JS Game -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

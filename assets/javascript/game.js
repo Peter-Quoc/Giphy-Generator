@@ -22,11 +22,12 @@ $(document).ready(function () {
 	      		rating.addClass("rating");
 	      		rating.html("<h3>Rating: " + response.data[i].rating + "</h3>");
 	      		wrap.append(rating);
-	      		var giphy = $("<div>");
+	      		var giphy = $("<img>");
 	      		giphy.addClass("giphy");
-	      		//
-	      		giphy.attr("gif", response.data[i].fixed_height.url);
-	      		giphy.html("<img src=" + response.data[i].images.fixed_height_still.url + ">");
+	      		giphy.attr("state", "still");
+               giphy.attr("src", response.data[i].images.fixed_height_still.url);
+               giphy.attr("animate", response.data[i].images.fixed_height.url);
+               giphy.attr("still", response.data[i].images.fixed_height_still.url);
 	      		wrap.append(giphy);
 	      		$(".giphy-results").append(wrap);
 	      	};
@@ -34,11 +35,17 @@ $(document).ready(function () {
       };
 
       function playGIF() {
-      	if(gifPlaying) {
-      		$(".giphy").html("<img src=" + giphy.attr("gif") + ">");
-      	} else {
+         var state = $(this).attr("state");
+         var animate = $(this).attr("animate");
+         var still = $(this).attr("still");
 
-      	}
+         if (state === "still") {
+            $(this).attr("src", animate);
+            $(this).attr("state", "animate");
+         } else {
+            $(this).attr("src", still);
+            $(this).attr("state", "still");
+         };
       }; 
 
       	// Function for displaying anime button

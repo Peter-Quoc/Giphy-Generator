@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	var animes = ["Dragonball Z", "Naruto", "Bleach", "Himouto", "One Piece", "One Punch Man"];
+	var animes = ["Dragonball Z", "Naruto", "Bleach", "Himouto", "One Piece", "One Punch Man", "Full Metal Alchemist", "Pokemon", "Digimon", "Death Note", "RBWY", "Sword Art Online", "Attack on Titan"];
 	var gifPlaying = false;
       function displayGIF() {
       	$(".giphy-results").empty();
@@ -26,7 +26,7 @@ $(document).ready(function () {
 	      		giphy.addClass("giphy");
 	      		giphy.attr("state", "still");
                giphy.attr("src", response.data[i].images.fixed_height_still.url);
-               giphy.attr("animate", response.data[i].images.fixed_height.url);
+               giphy.attr("animate", response.data[i].images.fixed_height_downsampled.url);
                giphy.attr("still", response.data[i].images.fixed_height_still.url);
 	      		wrap.append(giphy);
 	      		$(".giphy-results").append(wrap);

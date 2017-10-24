@@ -1,5 +1,7 @@
 body {
-	background-color: black;
+	background: url("../images/background2.jpg");
+	background-repeat: none;
+	background-size: 100%;
 }
 
 .animebtn {
